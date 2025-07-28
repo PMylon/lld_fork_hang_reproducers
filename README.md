@@ -6,19 +6,26 @@ This repo contains two reproducers for a hang caused by parallelFor when lldMain
 - fork_parallel_hang_reproducer: Reproduces the hang by calling directly the point of failure (parallelFor)
 
 ## Build & Run
-- For lld_fork_hang_reproducer:
+For lld_fork_hang_reproducer:
+```
 mkdir -p build && cd build
 cmake -DLLVM_DIR=<path-to-lib/cmake/llvm> -DLLD_DIR=<path-to-lib/cmake/lld> ..
 cmake --build .
-
+```
 To reproduce the hang do:
+```
 ./lld_fork_hang
+```
 For the workaround (use --threads==1 for lld) do:
+```
 LLD_DISABLE_THREADS=1 ./lld_fork_hang
+```
 
-- For fork_parallel_hang_reproducer
+For fork_parallel_hang_reproducer:
+```
 mkdir -p build && cd build
 cmake -DLLVM_DIR=<path-to-lib/cmake/llvm> ..
 cmake --build .
 
 ./fork_parallel_hang
+```
