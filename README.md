@@ -9,6 +9,7 @@ LLVM issue: https://github.com/llvm/llvm-project/issues/150918
 ## Build & Run
 For lld_fork_hang_reproducer:
 ```
+cd lld_fork_hang_reproducer
 mkdir -p build && cd build
 cmake -DLLVM_DIR=<path-to-lib/cmake/llvm> -DLLD_DIR=<path-to-lib/cmake/lld> ..
 cmake --build .
@@ -24,6 +25,7 @@ LLD_DISABLE_THREADS=1 ./lld_fork_hang
 
 For fork_parallel_hang_reproducer:
 ```
+cd fork_parallel_hang_reproducer
 mkdir -p build && cd build
 cmake -DLLVM_DIR=<path-to-lib/cmake/llvm> ..
 cmake --build .
