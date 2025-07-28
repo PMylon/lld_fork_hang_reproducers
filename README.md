@@ -5,6 +5,7 @@ This repo contains two reproducers for a hang caused by parallelFor when lldMain
 - lld_fork_hang_reproducer: Reproduces the hang by calling lld::lldMain
 - fork_parallel_hang_reproducer: Reproduces the hang by calling directly the point of failure (parallelFor)
 
+LLVM issue: https://github.com/llvm/llvm-project/issues/150918
 ## Build & Run
 For lld_fork_hang_reproducer:
 ```
